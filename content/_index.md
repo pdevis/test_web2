@@ -58,7 +58,7 @@ sections:
     #   # Reduce spacing
     #   spacing:
     #     padding: ["1rem", 0, "1rem", 0]
-  - block: cta-image-paragraph
+  - block: markdown
     id: about
     content:
       items:
@@ -112,7 +112,7 @@ sections:
     #   # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
 
-  - block: cta-image-paragraph
+  - block: markdown
     id: examples
     content:
       items:
