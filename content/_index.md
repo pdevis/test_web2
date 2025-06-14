@@ -1,80 +1,134 @@
 ---
-# Leave the homepage title empty to use the site title
-title:
-date: 2022-10-24
+title: 'Home'
+date: 2023-10-24
 type: landing
+
+design:
+  # Default section spacing
+  spacing: "6rem"
 
 sections:
   - block: hero
     content:
-      title: |
-        Wowchemy
-        Research Group
-      image:
-        filename: welcome.jpg
-      text: |
-        <br>
-        
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
-  
-  - block: collection
-    content:
-      title: Latest News
-      subtitle:
-      text:
-      count: 5
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-      offset: 0
-      order: desc
-      page_type: post
+      title: CoMet
+      text: Uncertainties made easy!
+      primary_action:
+        text: Get Started
+        url: user-guide/getting-started
+        icon: rocket-launch
+      # secondary_action:
+      #   text: Read the docs
+      #   url: https://docs.hugoblox.com
+      announcement:
+        text: "For the latest updates"
+        link:
+          text: "click here"
+          url: "latest-news/"
     design:
-      view: card
-      columns: '1'
-  
-  - block: markdown
-    content:
-      title:
-      subtitle: ''
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
-          filename: coders.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
       spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
-
-  - block: collection
+        padding: [0, 0, 0, 0]
+        margin: [0, 0, 0, 0]
+      # For full-screen, add `min-h-screen` below
+      css_class: "dark"
+      background:
+        color: "navy"
+        image:
+          # Add your image background to `assets/media/`.
+          filename: background.jpg
+          filters:
+            brightness: 0.5
+  # - block: stats
+  #   content:
+  #     items:
+  #       - statistic: "1M+"
+  #         description: |
+  #           Websites built  
+  #           with Hugo Blox
+  #       - statistic: "10k+"
+  #         description: |
+  #           GitHub stars  
+  #           since 2016
+  #       - statistic: "3k+"
+  #         description: |
+  #           Discord community  
+  #           for support
+    # design:
+    #   # Section background color (CSS class)
+    #   css_class: "bg-gray-100 dark:bg-gray-900"
+    #   # Reduce spacing
+    #   spacing:
+    #     padding: ["1rem", 0, "1rem", 0]
+  - block: cta-image-paragraph
+    id: about
     content:
-      title: Latest Preprints
-      text: ""
-      count: 5
-      filters:
-        folders:
-          - publication
-        publication_type: 'article'
-    design:
-      view: citation
-      columns: '1'
-
-  - block: markdown
+      items:
+        - title: Community Metrology Toolkit
+          text: An open-source software project for assessing data uncertainties.
+          feature_icon: check
+          features:
+            - "Handle, propagate & store measurement uncertainties"
+            - "Take into account error-correlation information"
+          # Upload image to `assets/media/` and reference the filename here
+          image: build-website.png
+          caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+          button:
+            text: Learn More
+            url: about/
+            icon: rocket-launch
+  - block: features
+    id: tools
     content:
-      title:
-      subtitle:
-      text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
+      title: Tools
+      text: A list of tools which abstract away the complexity of dealing with uncertainties.
+      items:
+        - name: punpy
+          icon: star
+          description: propagates uncertainties on input quantities through any python function, evaluating the uncertainty on the output
+        - name: obsarray
+          icon: sparkles
+          description: an extension to xarray for defining, storing and interfacing with uncertainty and measurement error-covariance information in NetCDF files using standardised metadata
+        - name: comet_maths
+          icon: code-bracket
+          description: useful mathematical algorithms, including interpolation with uncertainties
+          url: tools/comet_maths
     design:
-      columns: '1'
+    #   # Section background color (CSS class)
+      css_class: "bg-gray-100 dark:bg-gray-900"
+
+  # - block: buttons
+  #   content:
+  #     buttons:
+  #       - title: comet_maths
+  #         icon: code-bracket
+  #         url: tools/comet_maths
+  #       - title: punpy
+  #         icon: star
+  #         url: tools/punpy
+  #       - title:  obsarray
+  #         icon: sparkles
+  #         url:  tools/obsarray
+          
+    design:
+    #   # Section background color (CSS class)
+      css_class: "bg-gray-100 dark:bg-gray-900"
+
+  - block: cta-image-paragraph
+    id: examples
+    content:
+      items:
+        - title: Exploring the possibilities!
+          text: CoMet can be used to
+          feature_icon: bolt
+          features:
+            - "Propagate uncertainties"
+            - "Handle error-correlation/error-covariance matrices"
+            - "Create digital effects tables"
+            - "Validate measurements"
+          # Upload image to `assets/media/` and reference the filename here
+          image: coffee.jpg
+          caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+          button:
+            text: More applications
+            url: user-guide/examples/
+            icon: rocket-launch
 ---
