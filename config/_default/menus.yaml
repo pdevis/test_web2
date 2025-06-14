@@ -1,24 +1,49 @@
 # Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
+#   To link a page section, specify the URL as a hash `/#` followed by the `id` of the section.
+#   The `weight` parameter defines the order that the links will appear in.
 
 main:
-  - name: Tour
-    url: tour
+  - name: Home
+    url: /#top
     weight: 10
-  - name: News
-    url: post
+  - name: About
+    url: /about
     weight: 20
+  - name: User Guide
+    url: /user-guide
+    weight: 30
+    hasChildren: true
+  - parent: User Guide
+    name: Getting Started
+    url:  user-guide/getting-started
+    weight: 31
+  - parent: User Guide
+    name: Theory
+    url:  user-guide/theory/
+    weight: 33
+  - parent: User Guide
+    name: Examples
+    url: user-guide/examples/
+    weight: 32
+  - name: Tools
+    url: /#tools
+    weight: 40
+    hasChildren: true
+  - parent: Tools
+    name: comet_maths
+    url: tools/comet_maths
+    weight: 43
+  - parent: Tools
+    name: obsarray
+    url: tools/obsarray
+    weight: 42
+  - parent: Tools
+    name: punpy
+    url: tools/punpy
+    weight: 41
+  - name: News
+    url: latest-news
+    weight: 50
   - name: People
     url: people
-    weight: 30
-  - name: Events
-    url: event
-    weight: 40
-  - name: Publications
-    url: publication
-    weight: 50
-  - name: Contact
-    url: contact
     weight: 60
