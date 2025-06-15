@@ -9,6 +9,7 @@ date: 2024-03-21
 
 authors:
   - RasmaOrmane
+  - admin
 
 tags:
   - CoMet
@@ -44,6 +45,7 @@ but more modules are planned to be developed and included in the future. For mor
 ## 2. 🗃️ Characterise the data/measurements that require the uncertainty propagation. 
 
 The main purpose of these tools, is to propagate uncertaintites. To do that, you must have an overall understanding of the type of data/measurements you are working with. 
+
 For a general approach on determining an uncertainty budget, we refer to the 5-step QA4EO approach. See [this page](user-guide/theory/QA4EO) in our theory section, or the [QA4EO process document](https://qa4eo.org/docs/3_Process_Document.pdf).
 
 To help you identify all the relevant information from your dataset, we have compiled a list of relevant questions and tips.
@@ -63,7 +65,7 @@ To help you identify all the relevant information from your dataset, we have com
     2. Systematic
     3. Structured
 
-  ❕ Each of the input quantities will be affected by **one or more** error effect!
+  ❕ Typically, each of the input quantities will be affected by **one or more** error effect!
 
 ### 🗸 Defining measurement function
 
@@ -129,13 +131,14 @@ In this section, we have highlighted certain tips for advanced use of the toolki
 
 ### 🗸 Managing memory and runtime
 
-  - Certain products may have large RAM requirements.
+  Certain products may have large RAM requirements, and the MC approach that is often used in CoMet can increase the RAM and runtime requirements by one or more orders of magnitude. 
   
-  For example, to propagate uncertainties for all of the **HYPERNETS L2B** surface reflectance data series, [punpy]({{< relref "/tools/punpy" >}}) would have to calculate a very large correlation matrix.
+  There are ways to manage memory and runtime, as described in the [punpy documentation](https://punpy.readthedocs.io/en/latest/content/punpy_memory_and_speed.html). 
 
-  This can be avoided, by utilising **error correlation dictionaries**, which will take much less memory. 
-  
-  Full example code for this adjustment is available [here](https://colab.research.google.com/github/comet-toolkit/comet_training/blob/main/hypernets_surface_reflectance.ipynb).
+  For example, often storing the error correlation between all the measurements along all dimensions in a dataset is often prohibitively memory intensive. 
+  Instead, it is usually possible to store the error correlation separately between different dimensions. 
 
-  Other ways to manage memory and runtime are described in the [punpy documentation](https://punpy.readthedocs.io/en/latest/content/punpy_memory_and_speed.html). 
+  E.g. the **HYPERNETS L2A** surface reflectance data, has a wavelength and series dimension for which the error correlation are stored separately.  
+  When propagating this information, using error correlation dictionaries can be useful, (see e.g. the end of [this jupyter notebook example](https://colab.research.google.com/github/comet-toolkit/comet_training/blob/main/hypernets_surface_reflectance.ipynb)).
+
 
