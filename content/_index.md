@@ -26,7 +26,7 @@ sections:
           url: "latest-news/"
     design:
       spacing:
-        padding: [0, 0, 0, 0]
+        padding: [50, 0, 50, 0]
         margin: [0, 0, 0, 0]
       # For full-screen, add `min-h-screen` below
       css_class: "dark"
@@ -82,13 +82,15 @@ sections:
       text: A list of tools which abstract away the complexity of dealing with uncertainties.
       items:
         - name: punpy
-          icon: star
+          icon: punpy
           description: propagates uncertainties on input quantities through any python function, evaluating the uncertainty on the output
+          url: tools/punpy     
         - name: obsarray
-          icon: sparkles
+          icon: obsarray
           description: an extension to xarray for defining, storing and interfacing with uncertainty and measurement error-covariance information in NetCDF files using standardised metadata
+          url: tools/obsarray
         - name: comet_maths
-          icon: code-bracket
+          icon: comet_maths
           description: useful mathematical algorithms, including interpolation with uncertainties
           url: tools/comet_maths
     design:
