@@ -11,40 +11,40 @@ main:
     weight: 20
   - name: User Guide
     url: /user-guide
-    weight: 30
+    weight: 40
     hasChildren: true
   - parent: User Guide
     name: Getting Started
     url:  user-guide/getting-started
-    weight: 31
+    weight: 41
   - parent: User Guide
     name: Examples
     url: user-guide/examples/
-    weight: 32
+    weight: 42
   - parent: User Guide
     name: Theory
     url:  user-guide/theory/
-    weight: 33
+    weight: 43
   - parent: User Guide
     name: Case Studies
     url: user-guide/case-studies/
-    weight: 33
+    weight: 44
   - name: Tools
     url: /#tools
-    weight: 40
+    weight: 30
     hasChildren: true
   - parent: Tools
     name: comet_maths
     url: tools/comet_maths
-    weight: 43
+    weight: 33
   - parent: Tools
     name: obsarray
     url: tools/obsarray
-    weight: 42
+    weight: 32
   - parent: Tools
     name: punpy
     url: tools/punpy
-    weight: 41
+    weight: 31
   - name: News
     url: latest-news
     weight: 50
