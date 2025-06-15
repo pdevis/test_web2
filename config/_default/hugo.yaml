@@ -6,6 +6,9 @@
 title: Wowchemy Research Group # Website name
 baseURL: 'https://example.com/' # Website URL
 
+build:
+  writeStats: true
+
 ############################
 ## LANGUAGE
 ############################
