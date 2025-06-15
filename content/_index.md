@@ -83,14 +83,17 @@ sections:
       items:
         - name: punpy
           icon: punpy
+          icon-pack: custom
           description: propagates uncertainties on input quantities through any python function, evaluating the uncertainty on the output
           url: tools/punpy     
         - name: obsarray
           icon: obsarray
+          icon-pack: custom
           description: an extension to xarray for defining, storing and interfacing with uncertainty and measurement error-covariance information in NetCDF files using standardised metadata
           url: tools/obsarray
         - name: comet_maths
           icon: comet_maths
+          icon-pack: custom
           description: useful mathematical algorithms, including interpolation with uncertainties
           url: tools/comet_maths
     design:
