@@ -1,6 +1,5 @@
 ---
 title: Meet the Team
-#tyep: widget_page
 type: landing
 #widget: people
 
