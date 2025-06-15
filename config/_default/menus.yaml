@@ -18,13 +18,17 @@ main:
     url:  user-guide/getting-started
     weight: 31
   - parent: User Guide
+    name: Examples
+    url: user-guide/examples/
+    weight: 32
+  - parent: User Guide
     name: Theory
     url:  user-guide/theory/
     weight: 33
   - parent: User Guide
-    name: Examples
-    url: user-guide/examples/
-    weight: 32
+    name: Case Studies
+    url: user-guide/case-studies/
+    weight: 33
   - name: Tools
     url: /#tools
     weight: 40

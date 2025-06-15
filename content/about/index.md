@@ -22,13 +22,17 @@ authors:
 ## ❔ What is CoMet Toolkit?
 
   The **Community Metrology** (CoMet) **Toolkit** is a set of open-source software tools that can handle, process, and store measurement data uncertainties and error-correlation information.
+ 
   The main feature of this toolkit lies in its abilities to deal with the complexities of combining individual uncertainties from various sources, propagating these through any Python measurement function, and quantify and store uncertainty and error correlation information on the outputs. 
+  
   This is done in a way that allows the user to use quality assured code, while most of the complexities are handled behind the scenes. This simplifies dealing with uncertainties for experienced and less experienced users alike.  
 
 ## 💡 Why is CoMet Toolkit relevant?
 
   To ensure credible and reliable interpretation of data, the associated uncertainty information ought to be provided. Oftentimes it is made up of a multitude of sources combined through the processing chain. Each source affects the final product at varying levels.
+  
   When multiple measurements with uncertainties are combined throughout the processing chain (e.g. performing temporal or spatial averages or integrals, or when fitting a model to the data), it is also critical to take into account the error-correlation information. 
+  
   Depending on the error-correlation, the output uncertainty will be different (e.g., random uncertainties are reduced by averaging, but systematic uncertainties are not). To get a correct uncertainty on the final measurand from the combined measurements, 
   the error correlation thus needs to be taken into account for each relevant dimension. 
 
@@ -55,7 +59,7 @@ CoMet toolkit can be used to:
 - calculate the uncertainty budget
 - _many more_
 
-Initially, CoMet was developed to fulfil the Quality Assurance framework for Earth Observation (**QA4EO**) requirements.
+Initially, CoMet was designed to fulfil the Quality Assurance framework for Earth Observation (**QA4EO**) requirements.
 According to these guidelines, all Satellite Earth Observations (EO) and in-situ measurements require their corresponding uncertainty information. 
 Where as the CoMet toolkit was designed with the requirements of the EO community in mind, 
 it can be applied to any field that requires measurement uncertainty propagation. 

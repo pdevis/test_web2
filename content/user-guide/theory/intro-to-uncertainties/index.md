@@ -41,6 +41,23 @@ The Guide to the expression of Uncertainty in Measurement or **GUM** for short, 
 All the official documentation of GUM as well as a guide to the **International Vocabulary of Metrology** (VIM) are available [here](https://www.bipm.org/en/committees/jc/jcgm/publications). 
 
 
+## 🏆 Best practice framework for EO
+
+To ensure credible and reliable interpretation of environmental observations from satellites and in-situ measurements, Committee on Earth Observation Satellites (**CEOS**) has established and endorced the Quality Assurance framework for Earth Observation [(**QA4EO**)](https://qa4eo.org/). 
+
+This framework requires that associated uncertainty information is provided for all measurements. Additionally, it highlights the importance of understanding the **error-covariances** in the data is. 
+
+Approaches defined within QA4EO enable the EO community to develop quantitative characterisation of uncertainty in EO data. 
+
+QA4EO developed a 5-steps approach to do an uncertainty budget. These 5 steps are described in the   
+
+However, practically implementing these methods is not trivial and can be time consuming. 
+
+As a way to facilitate this, the CoMet Toolkit was developed as a means to store and propagate uncertainty and error-correlation information. 
+
+
+
+
 ## ✔️ Uncertainty in Earth Observations (EO)
 
 Considering the origins of this toolkit, it makes sense to dive a bit deeper into the uncertainties in the context of **Earth Observations**.
@@ -54,21 +71,6 @@ This project provides a comprehensive guide to understanding and implementing:
   - [Uncertainty trees](https://research.reading.ac.uk/fiduceo/fcdrs/theoretical-basis-2/2-defining-uncertainty-effects/)
   - [Effects tables](https://research.reading.ac.uk/fiduceo/fcdrs/theoretical-basis-2/4-completing-the-effects-table/)
   - [Harmonisation](https://research.reading.ac.uk/fiduceo/fcdrs/harmonisation/)
-
-
-## 🏆 Best practice framework for EO
-
-To ensure credible and reliable interpretation of environmental observations from satellites and in-situ measurements, Committee on Earth Observation Satellites (**CEOS**) has established and endorced the Quality Assurance framework for Earth Observation [(**QA4EO**)](https://qa4eo.org/). 
-
-This framework requires that associated uncertainty information is provided for all measurements. Additionally, it highlights the importance of understanding the **error-covariances** in the data is. 
-
-For example, the significance of separate handling of random and systematic uncertainties.
-
-Approaches defined within QA4EO enable the EO community to develop quantitative characterisation of uncertainty in EO data. 
-
-However, practically implementing these methods is not trivial and can be time consuming. 
-
-As a way to facilitate this, the CoMet Toolkit was developed as a means to store and propagate uncertainty and error-correlation information. 
 
 
 

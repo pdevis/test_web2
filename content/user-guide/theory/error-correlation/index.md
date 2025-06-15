@@ -1,7 +1,7 @@
 ---
 title: Error correlation
 summary: How to assess the relationships between measurement uncertainties?
-date: 2999-03-20
+date: 2025-06-14
 authors:
   - admin
 tags:
