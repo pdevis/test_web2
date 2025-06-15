@@ -3,7 +3,7 @@ title: Error correlation and how to store it
 summary: How to assess the relationships between measurement errors, and store this information?
 date: 2025-06-12
 authors:
-  - admin
+  - SamHunt
 tags:
   - Uncertainty
   - Error
