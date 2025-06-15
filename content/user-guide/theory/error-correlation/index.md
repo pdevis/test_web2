@@ -11,4 +11,4 @@ image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
 
-Some test content
+See this [FIDUCEO tutorial](https://research.reading.ac.uk/fiduceo/archive/tutorials/evaluating-error-correlation/) for further information on how to evaluate error-correlation information. 

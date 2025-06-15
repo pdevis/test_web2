@@ -30,7 +30,7 @@ There are five steps towards a metrological uncertainty analysis. These steps ar
 •	Step 5: Record information about the uncertainty analysis for long term data preservation purposes (implicit above) and summarise for today’s users
 
 
-The CoMet toolkit is particularly useful for steps 4, (see our page on [**propagating uncertainties through a measurement function**](user-guide/theory/intro-to-uncertainties/)) and step 5 (see our page on [error correlation and how to store it](user-guide/theory/error_correlation)).
+The CoMet toolkit is particularly useful for steps 4, (see our page on [**propagating uncertainties through a measurement function**](user-guide/theory/processing-chains/)) and step 5 (see our page on [error correlation and how to store it](user-guide/theory/error_correlation)).
 
 As discussed in the QA4EO Process document, Effects Tables (step 3) are a useful way to record and report the information required to fully parameterise an error-correlation effect. However, to use this information in a processing chain, it must be provided digitally. The CoMet Toolkit defines a mechanism for this, with a metadata standard (see UNC specification) that enables the creation of Digital Effects Tables stored in NetCDF files. In this way, uncertainty information can be written, read, 
 

@@ -25,7 +25,7 @@ In this brief guide we will walk you through the basic steps and prerequisists t
 
 ## 1.💡 Get familiar with the toolkit and its capabilitites. 
 
-All the relevant information regarding the aims and functionality of CoMet Tolkit is outlined in the [**About Section**]({{< relref "/about" >}}). 
+All the relevant information regarding the aims and functionality of CoMet Toolkit is outlined in the [**About Section**]({{< relref "/about" >}}). 
 
 But, in a nutshell, 
 
@@ -44,6 +44,7 @@ but more modules are planned to be developed and included in the future. For mor
 ## 2. 🗃️ Characterise the data/measurements that require the uncertainty propagation. 
 
 The main purpose of these tools, is to propagate uncertaintites. To do that, you must have an overall understanding of the type of data/measurements you are working with. 
+For a general approach on determining an uncertainty budget, we refer to the 5-step QA4EO approach. See [this page](user-guide/theory/QA4EO) in our theory section, or the [QA4EO process document](https://qa4eo.org/docs/3_Process_Document.pdf).
 
 To help you identify all the relevant information from your dataset, we have compiled a list of relevant questions and tips.
 
@@ -60,15 +61,17 @@ To help you identify all the relevant information from your dataset, we have com
   - There are three types of errors, each with their own characteristics: 
     1. Random
     2. Systematic
-    3. Structured random
+    3. Structured
 
   ❕ Each of the input quantities will be affected by **one or more** error effect!
 
 ### 🗸 Defining measurement function
 
-  - ❔ What is the analytic expression (i.e. measuremet function) of your data? 
+  - ❔ What is the analytic expression (i.e. measurement function) of your data? 
+  - ❔ Do you have a more complex processing chain using external software?
+  - ❔ Can your measurement function be written as a Python function that has the input quantities as arguments, and returns the measurand? 
 
-  Read more about the importance and functionality of **measurement functions** in this [FIDUCEO tutorial](https://research.reading.ac.uk/fiduceo/archive/tutorials/measurement-function-pt1/#:~:text=Often%2C%20we%20are%20able%20to%20explicitly%20write%20the,X%20i%2C%20via%20the%20functional%20relationship%20f%20f.).
+  Read more about the importance and functionality of **measurement functions** in our page on [**propagating uncertainties through a measurement function**](user-guide/theory/processing-chains/).  
 
 ### 🗸 Determining error correlation
 
@@ -78,7 +81,7 @@ As defined by this FIDUCEO article on ["The origin of error correlation"](https:
 
   > Correlation is a statistical measure of how two, or more, variables vary together.
 
-To learn more about error correlation structures and examples in the context of Earth Observations, refer this [FIDUCEO tutorial](https://research.reading.ac.uk/fiduceo/archive/tutorials/evaluating-error-correlation/). 
+To learn more about error correlation structures and examples in the context of Earth Observations, refer our page on [error correlation and how to store it](user-guide/theory/error_correlation).
 
 ## 3. 🧾 Identify similarities between your specific requirements and the available examples.
 
@@ -105,24 +108,24 @@ After defining a measurement function, installing and importing all the relevant
 
 A general overview of the various capabilitites and methods are combiled bellow. 
 
+  - store uncertainty and error correlation information
+    1. machine readable digital effects tables
+    2. UNC specification
   - Propagate uncertainties
     1. 🎲 Monte Carlo (MC)
     2. ⚖️ Law of Propagation of Uncertainty (LPU)
-    3. ⛰️ Gaussian Process Regression (GPR)
-    4. 📈 Standard deviation
   - Interpolate data & uncertainties
     1. Linear
     2. Quadratic
     3. Cubic 
-  - Extrapolate data
-    1. Analytical method
-  - Plot results
+    4. Gaussian Process Regression (GPR)
+    5. Extrapolate data
 
 _Several of the methods listed above apply to more than one of the applications. For more information refer to [examples]({{< relref "/user-guide/examples" >}})._
 
 ## 6. 📈 Advanced use.
 
-In this section, we have highlighted certain tips for advaced use of the toolkit. 
+In this section, we have highlighted certain tips for advanced use of the toolkit. 
 
 ### 🗸 Managing memory and runtime
 
@@ -134,15 +137,5 @@ In this section, we have highlighted certain tips for advaced use of the toolkit
   
   Full example code for this adjustment is available [here](https://colab.research.google.com/github/comet-toolkit/comet_training/blob/main/hypernets_surface_reflectance.ipynb).
 
+  Other ways to manage memory and runtime are described in the [punpy documentation](https://punpy.readthedocs.io/en/latest/content/punpy_memory_and_speed.html). 
 
-  <!-- 
-  
-  Things to include here from Pieter
-
-  One section I would add at the end is on `advanced use' or `managing memory and runtime' or something like that, which could point to https://punpy.readthedocs.io/en/latest/content/punpy_memory_and_speed.html and other resources for how to deal with more complex/large datasets (which tend to be what people really need in practise). 
-  
-  in step 4, there is not pip install comet, but there is a pip install punpy, pip install obsarray and pip install comet_maths   (note that the punpy install also installs the other two as dependencies). in step 5, I would say uncertainty propagation rather than estimation . Is uncertainty estimation of input quantities (i.e. compiling the actual values from documentation/literature/expert knowledge) part of step 2? Or should that be a separate step after step 2? We should make sure to link this to the QA4EO `steps to an uncertainty budget' (https://qa4eo.org/docs/3_Process_Document.pdf)
-  
-  Maybe under step 2, there could be a few subsections (e.g. general/defining measurement function/quantifying uncertainties on input quantities/determining error correlations)?
-  
-  -->

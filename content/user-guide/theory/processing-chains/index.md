@@ -1,6 +1,6 @@
 ---
 title: Propagating uncertainties through a processing chain
-summary: How are uncertainties propagated through a measurement function
+summary: How are uncertainties propagated through a measurement function?
 date: 2025-06-13
 authors:
   - admin
@@ -17,6 +17,7 @@ When determining the value of a given measurand (i.e. the quantity intended to b
 In some cases, this processing is relatively simple, and can be done with a simple analytical function.
 In other cases, a full processing chain is needed, which can contain a whole range of computational processing steps.
 In metrology (GUM), this relationship between the measurand and the input quantities is refered to as a measurement model or a measurement function. 
+For some further information, we refer to this [FIDUCEO tutorial](https://research.reading.ac.uk/fiduceo/archive/tutorials/measurement-function-pt1/#:~:text=Often%2C%20we%20are%20able%20to%20explicitly%20write%20the,X%20i%2C%20via%20the%20functional%20relationship%20f%20f.).
 
 ![img.png](img.png)
 
