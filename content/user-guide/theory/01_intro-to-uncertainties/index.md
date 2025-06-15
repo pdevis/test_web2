@@ -1,7 +1,6 @@
 ---
 title: Introduction to uncertainties
 summary: Walk-through the most important concepts relevant for CoMet Toolkit and its applications. 
-date: 2024-03-19
 authors:
   - RasmaOrmane
 tags:
