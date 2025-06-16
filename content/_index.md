@@ -58,7 +58,7 @@ sections:
     #   # Reduce spacing
     #   spacing:
     #     padding: ["1rem", 0, "1rem", 0]
-  - block: 'github.pdevis.cta-image-paragraph'
+  - block: cta-image-paragraph
     id: about
     content:
       items:
@@ -117,7 +117,7 @@ sections:
     #   # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
 
-  - block: 'github.pdevis.cta-image-paragraph'
+  - block: cta-image-paragraph
     id: examples
     content:
       items:
