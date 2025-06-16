@@ -28,7 +28,6 @@
         {{ range .features }}
         <li class="relative mb-4 pl-6">
           {{ partial "functions/get_icon" (dict "name" $icon "attributes" `class="inline-block pr-3" style="height: 1em;"`)  }}
-          {{ . | markdownify }}
         </li>
         {{ end }}
       </ul>
