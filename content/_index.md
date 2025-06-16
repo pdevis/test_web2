@@ -26,7 +26,7 @@ sections:
           url: "latest-news/"
     design:
       spacing:
-        padding: [100, 100, 100, 100]
+        padding: [300, 100, 300, 100]
         margin: [0, 0, 0, 0]
       # For full-screen, add `min-h-screen` below
       css_class: "dark"
