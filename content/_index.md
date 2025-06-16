@@ -66,8 +66,8 @@ sections:
           text: An open-source software project for assessing data uncertainties.
           feature_icon: check
           features:
-            "Handle, propagate & store measurement uncertainties"
-            "Take into account error-correlation information"
+            - "Handle, propagate & store measurement uncertainties"
+            - "Take into account error-correlation information"
           # Upload image to `assets/media/` and reference the filename here
           image: build-website.png
           caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
@@ -125,10 +125,10 @@ sections:
           text: CoMet can be used to
           feature_icon: bolt
           features:
-            "Propagate uncertainties"
-            "Handle error-correlation/error-covariance matrices"
-            "Create digital effects tables"
-            "Validate measurements"
+            - "Propagate uncertainties"
+            - "Handle error-correlation/error-covariance matrices"
+            - "Create digital effects tables"
+            - "Validate measurements"
           # Upload image to `assets/media/` and reference the filename here
           image: coffee.jpg
           caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
