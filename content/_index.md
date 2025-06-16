@@ -92,7 +92,7 @@ sections:
           description: an extension to xarray for defining, storing and interfacing with uncertainty and measurement error-covariance information in NetCDF files using standardised metadata
           url: tools/obsarray
         - name: comet_maths
-          icon: comet_maths
+          icon: comet-maths
           icon_pack: custom
           description: useful mathematical algorithms, including interpolation with uncertainties
           url: tools/comet_maths
